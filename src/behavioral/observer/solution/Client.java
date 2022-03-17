@@ -15,5 +15,14 @@ public class Client {
       int score = index * 10;
       scoreRecord.addScore(score);
     }
+
+    scoreRecord.detach(dataSheetView3);
+    StatisticsView statisticsView = new StatisticsView(scoreRecord);
+    scoreRecord.attach(statisticsView);
+
+    for (int index = 1; index <= 5; index++) {
+      int score = index * 10;
+      scoreRecord.addScore(score);
+    }
   }
 }
